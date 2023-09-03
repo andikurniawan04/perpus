@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('jumlah_halaman');
             $table->string('img_url');
             $table->integer('stok');
+            $table->foreignId('kategori_id')->nullable()->constrained()->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });
     }

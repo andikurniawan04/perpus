@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AnggotaController;
 use App\Http\Controllers\Api\BukuController;
+use App\Http\Controllers\API\KategoriController;
 use App\Http\Controllers\Api\PinjamController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::resource('/buku', BukuController::class);
 Route::resource('/pinjam', PinjamController::class);
 Route::resource('/anggota', AnggotaController::class);
+Route::resource('/kategori', KategoriController::class);

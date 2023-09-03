@@ -17,10 +17,16 @@ class Buku extends Model
         'jumlah_halaman',
         'img_url',
         'stok',
+        'kategori_id'
     ];
 
     public function pinjam()
     {
         return $this->hasMany(Pinjam::class);
+    }
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
     }
 }

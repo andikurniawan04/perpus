@@ -13,7 +13,13 @@ export type Buku = {
     tahun_terbit: number,
     jumlah_halaman: number,
     img_url: string,
-    stok: number
+    stok: number,
+    kategori_buku: string
+}
+
+export type Kategori = {
+    id: number,
+    nama: string
 }
 
 export type Anggota = {

@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import useBuku from "../hooks/use-buku";
+import useKategori from '../hooks/use-kategori';
 import { Buku as BukuType } from '../types';
 import { InfoModal } from '../components/Modal';
 const Buku = () => {
     const { buku, getBuku } = useBuku();
+    const { kategori, getKategori } = useKategori();
     const [data, setData] = useState<BukuType>();
+    const [searchCategory, setSearchCategory] = useState<string>("");
 
-    const bukuTersedia = buku.filter((item) => item.stok >= 1);
-    const bukuTidakTersedia = buku.filter((item) => item.stok < 1);
+    const bukuTersedia = buku.filter((item) => item.stok >= 1).filter((item) => item.kategori_buku.includes(searchCategory));
+    const bukuTidakTersedia = buku.filter((item) => item.stok < 1).filter((item) => item.kategori_buku.includes(searchCategory));
 
     const showModal = (data: BukuType) => {
         setData(data);
@@ -15,13 +18,26 @@ const Buku = () => {
 
     useEffect(() => {
         getBuku();
-    }, [])
+        getKategori();
+    }, []);
+
+
     return (
         <div className=" w-11/12 mx-auto my-10">
             {data && <InfoModal buku={data} />}
 
 
             <h1 className='text-2xl font-bold text-center my-5 '>List Buku</h1>
+            <select
+                required
+                onChange={(e) => setSearchCategory(e.target.value)}
+                name="buku_id"
+                className="select select-bordered w-full max-w-xs float-right">
+                <option disabled selected>Pilih Kategori</option>
+                {kategori.map((item) => (
+                    <option key={item.id} value={item.nama}>{item.nama}</option>
+                ))}
+            </select>
             <h1 className='text-2xl font-bold  my-5 '>Buku Tersedia</h1>
             <div className='flex flex-wrap gap-10'>
                 {bukuTersedia.map((item) => (

@@ -10,7 +10,7 @@ class BukuController extends Controller
 {
     public function index()
     {
-        $buku = Buku::select('id', 'judul', 'penulis', 'penerbit', 'tahun_terbit', 'jumlah_halaman', 'img_url', 'stok')->orderBy('stok', 'desc')->get();
+        $buku = Buku::join('kategoris', 'bukus.kategori_id', '=', 'kategoris.id')->select('bukus.id', 'bukus.judul', 'bukus.penulis', 'bukus.penerbit', 'bukus.tahun_terbit', 'bukus.jumlah_halaman', 'bukus.img_url', 'bukus.stok', 'kategoris.nama as kategori_buku')->orderBy('bukus.stok', 'desc')->get();
 
         return response()->json([
             "status" => "Sukses",

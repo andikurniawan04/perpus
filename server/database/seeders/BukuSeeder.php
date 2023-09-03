@@ -25,7 +25,9 @@ class BukuSeeder extends Seeder
                 'tahun_terbit' => $r['tahun_terbit'],
                 'jumlah_halaman' => $r['jumlah_halaman'],
                 'img_url' => $r['img_url'],
-                'stok' => $r['stok']
+                'stok' => $r['stok'],
+                'kategori_id' => $r['kategori_id'],
+
             ]);
         }
     }

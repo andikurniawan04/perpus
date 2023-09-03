@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { api } from "../utils/api";
-import { Anggota } from "../types";
+import { Kategori } from "../types";
 
-const useAnggota = () => {
-    const [anggota, setAnggota] = useState<Anggota[]>([]);
+const useKategori = () => {
+    const [kategori, setKategori] = useState<Kategori[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
 
-    const getAnggota = async () => {
+    const getKategori = async () => {
         setLoading(true);
         try {
-            const res = await api.get('/anggota');
+            const res = await api.get('/kategori');
             const { data } = res.data;
-            setAnggota(data);
+            setKategori(data);
             setLoading(false);
         } catch (error: any) {
             console.log(error);
@@ -19,7 +19,7 @@ const useAnggota = () => {
         }
     }
 
-    return { anggota, getAnggota, loading };
+    return { kategori, getKategori, loading };
 }
 
-export default useAnggota;
+export default useKategori;
