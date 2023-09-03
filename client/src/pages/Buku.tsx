@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import useBuku from "../hooks/use-buku";
+import { useSearchParams } from 'react-router-dom';
+import useBuku from '../hooks/use-buku';
 import useKategori from '../hooks/use-kategori';
 import { Buku as BukuType } from '../types';
 import { InfoModal } from '../components/Modal';
@@ -7,7 +8,9 @@ const Buku = () => {
     const { buku, getBuku } = useBuku();
     const { kategori, getKategori } = useKategori();
     const [data, setData] = useState<BukuType>();
-    const [searchCategory, setSearchCategory] = useState<string>("");
+    const [params] = useSearchParams();
+    const [searchCategory, setSearchCategory] = useState<string>(params.get("kategori") || '');
+
 
     const bukuTersedia = buku.filter((item) => item.stok >= 1).filter((item) => item.kategori_buku.includes(searchCategory));
     const bukuTidakTersedia = buku.filter((item) => item.stok < 1).filter((item) => item.kategori_buku.includes(searchCategory));
@@ -32,7 +35,7 @@ const Buku = () => {
                 required
                 onChange={(e) => setSearchCategory(e.target.value)}
                 name="buku_id"
-                className="select select-bordered w-full max-w-xs float-right">
+                className="select select-bordered w-full max-w-xs float-right z-10">
                 <option disabled selected>Pilih Kategori</option>
                 {kategori.map((item) => (
                     <option key={item.id} value={item.nama}>{item.nama}</option>

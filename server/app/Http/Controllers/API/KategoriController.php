@@ -10,7 +10,7 @@ class KategoriController extends Controller
 {
     public function index()
     {
-        $kategori = Kategori::select('id', 'nama')->get();
+        $kategori = Kategori::select('id', 'nama')->withCount('buku as jumlah_buku')->get();
 
         return response()->json([
             "status" => "Sukses",

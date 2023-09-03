@@ -21,10 +21,10 @@ const Laporan = () => {
 
     return (
         <div className="overflow-x-auto w-4/5 mx-auto my-10" >
-            <h1 className='text-2xl font-bold text-center my-5'>List Peminjam</h1>
+            <h1 className='text-2xl font-bold text-center my-5'>Riwayat Transaksi</h1>
             {loading ? <Loading /> :
                 <>
-                    <button onClick={generatePDF} className='float-right btn btn-primary my-5'>Download Laporan</button>
+                    <button onClick={generatePDF} className='btn btn-error text-white my-5 hover:bg-red-500'>Download<i className='fa-solid fa-file-pdf'></i></button>
 
                     <table className="table" id='report'>
                         <thead >
@@ -45,7 +45,7 @@ const Laporan = () => {
                                     <td>{item.judul_buku}</td>
                                     <td>{formatDate(item.tanggal_pinjam)}</td>
                                     <td>{formatDate(item.tanggal_kembali)}</td>
-                                    <td>{item.status}</td>
+                                    <td className={`badge text-white mt-3.5 ${item.status == 'pinjam' ? 'badge-info' : 'badge-success'}`}>{item.status}</td>
                                 </tr>
                             ))}
                         </tbody>

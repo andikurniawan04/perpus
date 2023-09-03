@@ -19,7 +19,8 @@ export type Buku = {
 
 export type Kategori = {
     id: number,
-    nama: string
+    nama: string,
+    jumlah_buku: number
 }
 
 export type Anggota = {

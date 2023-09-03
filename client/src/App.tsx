@@ -7,6 +7,7 @@ import PinjamCreate from './pages/Pinjam/create'
 import Laporan from './pages/Laporan'
 import Anggota from './pages/Anggota'
 import Home from './pages/Home'
+import Kategori from './pages/Kategori'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/pinjam/create' element={<PinjamCreate />} />
         <Route path='/laporan' element={<Laporan />} />
         <Route path='/anggota' element={<Anggota />} />
+        <Route path='/kategori' element={<Kategori />} />
       </Routes>
     </>
   )

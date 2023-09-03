@@ -20,9 +20,9 @@ const Sidebar = () => {
                     </a>
                 </li>
                 <li className='my-2'>
-                    <a href="/pinjam" className={`flex items-center px-2 py-3 rounded ${location.pathname.startsWith('/pinjam') ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-300'}`}>
-                        <i className="fa-solid fa-book-open-reader"></i>
-                        <span className="flex-1 ml-3 whitespace-nowrap">Pinjam Buku</span>
+                    <a href="/kategori" className={`flex items-center px-2 py-3  rounded ${location.pathname == '/kategori' ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-300'}`}>
+                        <i className="fa-solid fa-file-lines"></i>
+                        <span className="flex-1 ml-3 whitespace-nowrap">Kategori</span>
                     </a>
                 </li>
                 <li className='my-2'>
@@ -32,11 +32,18 @@ const Sidebar = () => {
                     </a>
                 </li>
                 <li className='my-2'>
+                    <a href="/pinjam" className={`flex items-center px-2 py-3 rounded ${location.pathname.startsWith('/pinjam') ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-300'}`}>
+                        <i className="fa-solid fa-book-open-reader"></i>
+                        <span className="flex-1 ml-3 whitespace-nowrap">Pinjam Buku</span>
+                    </a>
+                </li>
+                <li className='my-2'>
                     <a href="/laporan" className={`flex items-center px-2 py-3  rounded ${location.pathname == '/laporan' ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-300'}`}>
                         <i className="fa-solid fa-file-lines"></i>
                         <span className="flex-1 ml-3 whitespace-nowrap">Laporan</span>
                     </a>
                 </li>
+
 
             </ul>
 

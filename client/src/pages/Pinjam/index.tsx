@@ -43,7 +43,7 @@ const PInjam = () => {
                             <td>{item.judul_buku}</td>
                             <td>{formatDate(item.tanggal_pinjam)}</td>
                             <td>{formatDate(item.tanggal_kembali)}</td>
-                            <td>{item.status}</td>
+                            <td className={`badge text-white mt-3.5 ${item.status == 'pinjam' ? 'badge-info' : 'badge-success'}`}>{item.status}</td>
                             <td>
                                 {item.status == 'pinjam' &&
                                     <div className='flex gap-5'>
