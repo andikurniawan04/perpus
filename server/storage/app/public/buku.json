@@ -1,0 +1,72 @@
+[
+    {
+        "judul": "Harry Potter and the Sorcerer’s Stone",
+        "penulis": "J. K. Rowling",
+        "penerbit": "Gramedia",
+        "tahun_terbit": 2001,
+        "jumlah_halaman": 382,
+        "img_url": "https://images-cdn.reedsy.com/discovery/image/675/image/medium_935cabe28bfcfff77e4b48061dc00c7183aa0050.jpg",
+        "stok": 1,
+        "kategori_id": 2
+    },
+    {
+        "judul": " Harry Potter and the Deathly Hallows",
+        "penulis": "J. K. Rowling",
+        "penerbit": "Gramedia",
+        "tahun_terbit": 2008,
+        "jumlah_halaman": 784,
+        "img_url": "https://images-cdn.reedsy.com/discovery/image/681/image/medium_bb9f2c35b7180820e05f4adbe78844edaf44adbc.jpg",
+        "stok": 3,
+        "kategori_id": 2
+    },
+    {
+        "judul": "Atomic Habits",
+        "penulis": "James Clear",
+        "penerbit": "Gramedia",
+        "tahun_terbit": 2019,
+        "jumlah_halaman": 351,
+        "img_url": "https://m.media-amazon.com/images/I/71F4+7rk2eL._AC_UY327_FMwebp_QL65_.jpg",
+        "stok": 1,
+        "kategori_id": 1
+    },
+    {
+        "judul": "Rich Dad Poor Dad",
+        "penulis": "Robert T. Kiyosaki ",
+        "penerbit": "Gramedia",
+        "tahun_terbit": 2000,
+        "jumlah_halaman": 238,
+        "img_url": "https://m.media-amazon.com/images/I/81BE7eeKzAL._AC_UY327_FMwebp_QL65_.jpg",
+        "stok": 4,
+        "kategori_id": 1
+    },
+    {
+        "judul": "Naruto Vol 67",
+        "penulis": "Masashi Kishimoto",
+        "penerbit": "Elex Media Komputindo",
+        "tahun_terbit": 2014,
+        "jumlah_halaman": 192,
+        "img_url": "https://m.media-amazon.com/images/I/91XkjdKmX0L._AC_UY327_FMwebp_QL65_.jpg",
+        "stok": 2,
+        "kategori_id": 3
+    },
+    {
+        "judul": "One Piece Vol 104",
+        "penulis": "Eiichiro Oda",
+        "penerbit": "VIZ Media LLC",
+        "tahun_terbit": 2023,
+        "jumlah_halaman": 184,
+        "img_url": "https://m.media-amazon.com/images/I/61AEhndjtbL._SX331_BO1,204,203,200_.jpg",
+        "stok": 0,
+        "kategori_id": 3
+    },
+    {
+        "judul": "Naruto Vol 70",
+        "penulis": "Masashi Kishimoto",
+        "penerbit": "Elex Media Komputindo",
+        "tahun_terbit": 2015,
+        "jumlah_halaman": 208,
+        "img_url": "https://m.media-amazon.com/images/I/71LcKC2545L._AC_UY327_FMwebp_QL65_.jpg",
+        "stok": 1,
+        "kategori_id": 3
+    }
+]
