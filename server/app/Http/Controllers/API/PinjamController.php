@@ -16,6 +16,7 @@ class PinjamController extends Controller
     {
         $pinjam = Pinjam::join('bukus', 'pinjams.buku_id', '=', 'bukus.id')->join('anggotas', 'pinjams.anggota_id', '=', 'anggotas.id')
             ->select('pinjams.id', 'anggotas.nama_lengkap as nama_peminjam', 'bukus.judul as judul_buku', 'pinjams.tanggal_pinjam', 'pinjams.tanggal_kembali', 'pinjams.status')
+            ->orderBy('pinjams.id', 'desc')
             ->get();
         return response()->json([
             "status" => "Sukses",
@@ -48,8 +49,8 @@ class PinjamController extends Controller
         }
 
         Pinjam::create([
-            'tanggal_pinjam' => Carbon::now(),
-            'tanggal_kembali' => Carbon::now()->addDays(3),
+            'tanggal_pinjam' => Carbon::now('Asia/Jakarta'),
+            'tanggal_kembali' => Carbon::now('Asia/Jakarta')->addDays(3),
             'buku_id' => (int)$request->buku_id,
             'anggota_id' => $request->anggota_id
         ]);

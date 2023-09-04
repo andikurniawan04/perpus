@@ -20,9 +20,7 @@ const Anggota = () => {
                             <th>No HP</th>
                         </tr>
                     </thead>
-
                     <tbody className='text-lg'>
-
                         {anggota.map((item, i) => (
                             <tr key={item.id}>
                                 <th>{i + 1}</th>

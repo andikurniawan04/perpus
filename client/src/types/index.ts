@@ -1,10 +1,3 @@
-declare global {
-    interface Window {
-        my_modal: any; // 👈️ turn off type checking
-    }
-}
-
-
 export type Buku = {
     id: number,
     judul: string,

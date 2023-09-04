@@ -18,7 +18,6 @@ const useKategori = () => {
             setLoading(false);
         }
     }
-
     return { kategori, getKategori, loading };
 }
 

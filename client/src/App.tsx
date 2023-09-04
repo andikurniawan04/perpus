@@ -1,6 +1,5 @@
-import './App.css'
-import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar'
 import Buku from './pages/Buku'
 import Pinjam from './pages/Pinjam'
 import PinjamCreate from './pages/Pinjam/create'

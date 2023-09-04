@@ -31,9 +31,7 @@ export const InfoModal = ({ buku }: Props) => (
                     <h3 className="font-bold text-lg">Detail Buku</h3>
                     <label htmlFor="modal"><i className='fa-solid fa-xmark cursor-pointer text-lg'></i>
                     </label>
-
                 </div>
-
                 <div className='flex my-2'>
                     <div className='mr-2'>
                         <img className='w-56' src={buku.img_url} alt={buku.judul} />
@@ -58,6 +56,10 @@ export const InfoModal = ({ buku }: Props) => (
                         <div className='flex justify-between mb-2'>
                             <h1 className='text-md flex-1' >Jumlah Halaman</h1>
                             <p className='text-md flex-1'>: {buku.jumlah_halaman}</p>
+                        </div>
+                        <div className='flex justify-between mb-2'>
+                            <h1 className='text-md flex-1' >Kategori Buku</h1>
+                            <p className='text-md flex-1'>: {buku.kategori_buku}</p>
                         </div>
                         <div className='flex justify-between mb-2'>
                             <h1 className='text-md flex-1' >Stok</h1>

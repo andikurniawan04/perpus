@@ -17,7 +17,6 @@ const Home = () => {
     const bukuDipinjam = pinjam.filter((item) => item.status == 'pinjam');
     const bukuKembali = pinjam.filter((item) => item.status == 'kembali');
 
-
     useEffect(() => {
         getBuku();
         getPinjam();

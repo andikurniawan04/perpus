@@ -18,7 +18,6 @@ const useAnggota = () => {
             setLoading(false);
         }
     }
-
     return { anggota, getAnggota, loading };
 }
 

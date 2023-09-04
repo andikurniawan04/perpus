@@ -27,8 +27,8 @@ const PinjamCreate = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body border-2 rounded-xl shadow-xl flex flex-col gap-5">
                     <div className="form-control w-full max-w-xs">
                         <select
-                            required
                             {...register('anggota_id', { required: "required" })}
+                            required
                             name="anggota_id"
                             className="select select-bordered w-full max-w-xs">
                             <option disabled selected>Pilih Anggota</option>

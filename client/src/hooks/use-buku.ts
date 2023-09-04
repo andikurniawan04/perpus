@@ -6,7 +6,6 @@ const useBuku = () => {
     const [buku, setBuku] = useState<Buku[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
 
-
     const getBuku = async () => {
         setLoading(true);
         try {
@@ -19,7 +18,6 @@ const useBuku = () => {
             setLoading(false);
         }
     }
-
     return { buku, getBuku, loading };
 }
 

@@ -11,7 +11,6 @@ const Buku = () => {
     const [params] = useSearchParams();
     const [searchCategory, setSearchCategory] = useState<string>(params.get("kategori") || '');
 
-
     const bukuTersedia = buku.filter((item) => item.stok >= 1).filter((item) => item.kategori_buku.includes(searchCategory));
     const bukuTidakTersedia = buku.filter((item) => item.stok < 1).filter((item) => item.kategori_buku.includes(searchCategory));
 
@@ -28,8 +27,6 @@ const Buku = () => {
     return (
         <div className=" w-11/12 mx-auto my-10">
             {data && <InfoModal buku={data} />}
-
-
             <h1 className='text-2xl font-bold text-center my-5 '>List Buku</h1>
             <select
                 required
@@ -45,7 +42,7 @@ const Buku = () => {
             <div className='flex flex-wrap gap-10'>
                 {bukuTersedia.map((item) => (
                     <label key={item.id} htmlFor='modal' onClick={() => showModal(item)}>
-                        <div className='shadow-xl w-60 h-96 border-2 p-2 duration-150 hover:scale-110 cursor-pointer relative'>
+                        <div className='shadow-xl w-60 h-96 border-2 p-2 duration-150 hover:scale-110 hover:shadow-2xl cursor-pointer relative'>
                             <img className='h-60 m-auto' src={item.img_url} alt="gambar 1" />
                             <h1 className='text-lg text-gray-500 font-medium'>{item.judul}</h1>
                             <div className='flex justify-between items-center absolute bottom-0 left-0 right-0 p-2'>

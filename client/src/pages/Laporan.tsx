@@ -14,7 +14,6 @@ const Laporan = () => {
 
     const generatePDF = async () => {
         const report = new jsPDF();
-
         autoTable(report, { html: '#report' })
         report.save("report.pdf");
     }
@@ -25,7 +24,6 @@ const Laporan = () => {
             {loading ? <Loading /> :
                 <>
                     <button onClick={generatePDF} className='btn btn-error text-white my-5 hover:bg-red-500'>Download<i className='fa-solid fa-file-pdf'></i></button>
-
                     <table className="table" id='report'>
                         <thead >
                             <tr className="bg-base-200 text-lg font-bold text-black">

@@ -43,11 +43,7 @@ const Sidebar = () => {
                         <span className="flex-1 ml-3 whitespace-nowrap">Laporan</span>
                     </a>
                 </li>
-
-
             </ul>
-
-
         </div>
     )
 }

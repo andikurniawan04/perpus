@@ -21,9 +21,7 @@ const Kategori = () => {
                             <th>Jumlah Buku</th>
                         </tr>
                     </thead>
-
                     <tbody className='text-lg'>
-
                         {kategori.map((item, i) => (
                             <tr className='cursor-pointer hover:bg-base-300' onClick={() => openPage(`/buku?kategori=${item.nama}`)} key={item.id}>
                                 <th>{i + 1}</th>
